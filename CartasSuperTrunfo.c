@@ -12,6 +12,8 @@ int main() {
     float area1;
     float pib1;
     int pontosTuristicos1;
+    float densidade_populacional1;
+    float pib_per_capita1;
 
     // Declaração de variáveis para a segunda carta
     char estado2;
@@ -21,6 +23,8 @@ int main() {
     float area2;
     float pib2;
     int pontosTuristicos2;
+    float densidade_populacional2;
+    float pib_per_capita2;
 
     // --- CADASTRO DA PRIMEIRA CARTA ---
     printf("--- Cadastro da Carta 1 ---\n");
@@ -45,6 +49,10 @@ int main() {
     printf("Digite o Numero de Pontos Turisticos: ");
     scanf("%d", &pontosTuristicos1);
 
+    // Calculos para a primeira carta
+    densidade_populacional1 = populacao1 / area1;
+    pib_per_capita1 = pib1 / populacao1;
+
     // --- CADASTRO DA SEGUNDA CARTA ---
     printf("\n--- Cadastro da Carta 2 ---\n");
     printf("Digite o Estado (uma letra de 'A' a 'H'): ");
@@ -68,6 +76,10 @@ int main() {
     printf("Digite o Numero de Pontos Turisticos: ");
     scanf("%d", &pontosTuristicos2);
 
+    // Calculos para a segunda carta
+    densidade_populacional2 = populacao2 / area2;
+    pib_per_capita2 = pib2 / populacao2;
+
     // --- EXIBIÇÃO DAS INFORMAÇÕES DAS CARTAS ---
     printf("\n--- Informacoes das Cartas ---\n");
 
@@ -80,6 +92,9 @@ int main() {
     printf("Area: %.2f km²\n", area1);
     printf("PIB: %.2f bilhoes de reais\n", pib1);
     printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos1);
+    printf("Densidade Populacional: %.2f hab/km2\n", densidade_populacional1);
+    printf("PIB per Capita: %.2f\n", pib_per_capita1);
+    printf("----------------------\n");
 
     // Exibindo a segunda carta
     printf("\nCarta 2:\n");
@@ -90,7 +105,9 @@ int main() {
     printf("Area: %.2f km²\n", area2);
     printf("PIB: %.2f bilhoes de reais\n", pib2);
     printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos2);
-
+    printf("Densidade Populacional: %.2f hab/km2\n", densidade_populacional2);
+    printf("PIB per Capita: %.2f\n", pib_per_capita2);
+    printf("----------------------\n");
 
     return 0;
 }
